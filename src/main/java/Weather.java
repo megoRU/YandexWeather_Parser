@@ -7,11 +7,11 @@ public abstract class Weather {
 
   private static String URL;
 
-  public Weather(String URL) {
+  public Weather (String URL) {
     this.URL = URL;
   }
 
-  public void WeatherFromSite() throws IOException {
+  public void weatherFromSite() throws IOException {
     Document doc = Jsoup.connect(getWeather()).get();
     String title = doc.title();
     Elements termValueElement = doc.select("div.term__value"); //тут почти все данные температуры

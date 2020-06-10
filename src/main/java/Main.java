@@ -10,13 +10,13 @@ public class Main {
   public static void main(String[] args) throws IOException {
 
     Weather weatherSPB = new WeatherPrinter(SPB_WEATHER);
-    weatherSPB.WeatherFromSite();
+    weatherSPB.weatherFromSite();
 
     Weather weatherMSK = new WeatherPrinter(MSK_WEATHER);
-    weatherMSK.WeatherFromSite();
+    weatherMSK.weatherFromSite();
 
     Weather weatherUFA = new WeatherPrinter(UFA_WEATHER);
-    weatherUFA.WeatherFromSite();
+    weatherUFA.weatherFromSite();
 
   }
 }
