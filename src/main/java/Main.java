@@ -12,8 +12,8 @@ public class Main {
     Weather weatherSPB = new WeatherPrinter(SPB_WEATHER);
     weatherSPB.WeatherFromSite();
 
-    Weather weatherMOSCKOW = new WeatherPrinter(MSK_WEATHER);
-    weatherMOSCKOW.WeatherFromSite();
+    Weather weatherMSK = new WeatherPrinter(MSK_WEATHER);
+    weatherMSK.WeatherFromSite();
 
     Weather weatherUFA = new WeatherPrinter(UFA_WEATHER);
     weatherUFA.WeatherFromSite();
