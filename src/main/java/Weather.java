@@ -23,7 +23,7 @@ public class Weather {
         .select("div.link__feelings.fact__feelings"); //Ощущается как
     String textConditionJSOUP = linkConditionElement.text().trim();
     int textConditionJSOUPTemp = termValueElementTemp.text().lastIndexOf("а");
-    int textConditionJSOUPTempSimvol = termValueElementTemp.text()
+    int textConditionJSOUPTempChar = termValueElementTemp.text()
         .lastIndexOf("°"); //ищем последний "символ"
     int textConditionJSOUP2 = linkConditionElement2.text().lastIndexOf(" "); //ищем последний пробел
     int textConditionJSOUP3 = linkConditionElement2.text()
@@ -31,12 +31,13 @@ public class Weather {
     String textCondition2 = linkConditionElement2.text()
         .substring(textConditionJSOUP2 + 1, textConditionJSOUP3 + 1); //получаем полезную нагрузку
     String textCondition3 = termValueElementTemp.text().substring(textConditionJSOUPTemp + 1,
-        textConditionJSOUPTempSimvol + 1); //получаем полезную нагрузку
+        textConditionJSOUPTempChar + 1); //получаем полезную нагрузку
     int textTitle = title.indexOf("—"); //ищем последний символ
     System.out.println("              " + title.substring(0, textTitle - 12));
 
     String[] textFromJSOUP = termValueElement.text().split(" ");
 
+    //Парсинг данных в консоль
     System.out.println("Текущая температура: "
         + textCondition3 + " " + textConditionJSOUP
         + " | Ощущается как: " + textCondition2
