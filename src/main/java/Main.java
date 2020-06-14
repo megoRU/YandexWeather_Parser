@@ -9,13 +9,13 @@ public class Main {
 
   public static void main(String[] args) throws IOException {
 
-    Weather weatherSPB = new WeatherPrinter(SPB_WEATHER);
+    Weather weatherSPB = new Weather(SPB_WEATHER);
     weatherSPB.weatherFromSite();
 
-    Weather weatherMSK = new WeatherPrinter(MSK_WEATHER);
+    Weather weatherMSK = new Weather(MSK_WEATHER);
     weatherMSK.weatherFromSite();
 
-    Weather weatherUFA = new WeatherPrinter(UFA_WEATHER);
+    Weather weatherUFA = new Weather(UFA_WEATHER);
     weatherUFA.weatherFromSite();
 
   }
